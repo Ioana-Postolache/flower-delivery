@@ -4,12 +4,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-public class Flower extends Plant{
-    private String color;
+public class Shrub extends Plant{
+    private int heightCm;
+    private int widthCm;
 }
