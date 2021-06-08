@@ -11,6 +11,13 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+
+@NamedQueries({
+        @NamedQuery(
+                name = "Delivery.findByName",
+                query = "select d from Delivery d where d.name = :name")
+})
+
 @Getter
 @Setter
 @NoArgsConstructor
