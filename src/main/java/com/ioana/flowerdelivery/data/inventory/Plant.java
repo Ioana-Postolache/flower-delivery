@@ -30,4 +30,9 @@ public class Plant {
     @ManyToOne(fetch = FetchType.LAZY) //many plants can belong to one delivery
     @JoinColumn(name = "delivery_id")  //map the join column in the plant table
     private Delivery delivery;
+
+    public Plant(String name, double price){
+        this.name = name;
+        this.price = BigDecimal.valueOf(price);
+    }
 }
